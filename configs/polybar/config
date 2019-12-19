@@ -19,6 +19,7 @@
 [colors]
 ;background = ${xrdb:color0:#666}
 background = #000000000
+;background = #000000
 background-alt = #cc000000
 ;foreground = ${xrdb:color7:#222}
 foreground = #ffffff
@@ -44,6 +45,7 @@ line-color = #00000000
 
 border-size = 3
 border-color = #00000000
+;border-color = #000000
 
 padding-left = 1
 padding-right = 2
@@ -60,6 +62,9 @@ font-5 = "Font Awesome 5 Brands:pixelsize=13;1"
 font-6 = NotoSans-Regular:size=8;0
 font-7 = MaterialIcons:style=Regular:size=10;2
 font-8 = Termsynu:size=8;0
+font-9 = "Font Awesome 5 Free:style=Solid:pixelsize=9;1"
+font-10 = "Font Awesome 5 Free:style=Solid:pixelsize=6;1"
+font-11 = "Font Awesome 5 Free:style=Regular:pixelsize=5;1"
 
 modules-left = xwindow
 modules-center = memory i3 cpu
@@ -97,7 +102,7 @@ format-padding = 3
 type = internal/xkeyboard
 blacklist-0 = num lock
 
-format-prefix = " "
+format-prefix = %{T10} %{T-} 
 format-prefix-foreground = ${colors.foreground-alt}
 format-prefix-underline = ${colors.secondary}
 
@@ -115,7 +120,7 @@ interval = 25
 
 mount-0 = /
 
-label-mounted =  ⛁ %free%
+label-mounted =  %{T10}%{T-} %free%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
@@ -358,7 +363,6 @@ label = %date% %time%
 
 [module/pulseaudio]
 type = internal/pulseaudio
-click-right = exec pavucontrol &
 
 format-volume = <label-volume> <bar-volume>
 label-volume =  %percentage%%
@@ -368,7 +372,7 @@ format-underline = #55ceff
 label-muted =  mute
 label-muted-foreground = #ff0000
 
-bar-volume-width = 10
+bar-volume-width = 15
 bar-volume-foreground-0 = #55ceff
 bar-volume-foreground-1 = #55ceff
 bar-volume-foreground-2 = #55ceff
@@ -378,13 +382,13 @@ bar-volume-foreground-5 = #55ceff
 bar-volume-foreground-6 = #55ceff
 bar-volume-gradient = false
 bar-volume-indicator = |
-bar-volume-indicator-font = 2
-bar-volume-fill = ─
-bar-volume-fill-font = 2
-bar-volume-empty = ─
-bar-volume-empty-font = 2
+bar-volume-indicator-font = 10
+bar-volume-fill = 
+bar-volume-fill-font = 11
+bar-volume-empty = 
+bar-volume-empty-font = 11
 bar-volume-empty-foreground = ${colors.foreground-alt}
-
+; 
 [module/alsa]
 type = internal/alsa
 
@@ -422,13 +426,13 @@ full-at = 98
 ;<animation-charging>
 ;<animation-discharging>
 
-format-charging =  <label-charging>
+format-charging = %{T10}%{T-} <label-charging>
 format-charging-underline = #ffb52a
 
-format-discharging =  <label-discharging>
+format-discharging = %{T10}%{T-} <label-discharging>
 format-discharging-underline = ${self.format-charging-underline}
 
-format-full-prefix = 
+format-full-prefix = %{T10}%{T-}
 format-full-prefix-foreground = ${colors.foreground-alt}
 format-full-underline = ${self.format-charging-underline}
 
@@ -454,9 +458,10 @@ type = internal/temperature
 thermal-zone = 0
 warn-temperature = 60
 
-format =  <label>
+format-font = 9
+format = %{T10}%{T-} <label>
 format-underline = #f50a4d
-format-warn =  <label-warn>
+format-warn = %{T10}%{T-} <label-warn>
 format-warn-underline = ${self.format-underline}
 
 label = %temperature-c%
