@@ -18,8 +18,8 @@
 
 [colors]
 ;background = ${xrdb:color0:#666}
-background = #000000000
-;background = #000000
+;background = #000000000
+background = #00000000
 background-alt = #cc000000
 ;foreground = ${xrdb:color7:#222}
 foreground = #ffffff
@@ -59,7 +59,7 @@ font-2 = Wuncon siji:pixelsize=11;1
 font-3 = "Font Awesome 5 Free:style=Regular:pixelsize=10;1"
 font-4 = "Font Awesome 5 Free:style=Solid:pixelsize=13;1"
 font-5 = "Font Awesome 5 Brands:pixelsize=13;1"
-font-6 = NotoSans-Regular:size=8;0
+font-6 = NotoSans-Regular:size=8;0e
 font-7 = MaterialIcons:style=Regular:size=10;2
 font-8 = Termsynu:size=8;0
 font-9 = "Font Awesome 5 Free:style=Solid:pixelsize=9;1"
@@ -171,7 +171,7 @@ label-mode-background = ${colors.primary}
 
 ; focused = Active workspace on focused monitor
 label-focused = %name%
-label-focused-background = #ff00
+label-focused-background = background
 label-focused-foreground = #55ceff
 label-focused-underline = ${module/bspwm.label-focused-underline}
 label-focused-padding = 1
