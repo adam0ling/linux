@@ -71,7 +71,7 @@ font-14 = "Noto Sans:size=11;1"
 
 modules-left = xwindow
 modules-center = memory i3 cpu
-modules-right = date pulseaudio battery temperature filesystem xkeyboard tray
+modules-right = date pulseaudio battery temperature filesystem xkeyboard
 ;tray-position = right
 
 
@@ -101,7 +101,7 @@ tray-detached = false
 
 [module/xwindow]
 type = internal/xwindow
-label = %title:0:60:...%
+label = %title:0:45:...%
 format = <label>
 ;format-background = ${colors.background-alt}
 format-padding = 3
@@ -387,7 +387,7 @@ label-muted-foreground = #ff0000
 
 click-right = pavucontrol
 
-bar-volume-width = 15
+bar-volume-width = 10
 bar-volume-foreground-0 = #55ceff
 bar-volume-foreground-1 = #55ceff
 bar-volume-foreground-2 = #55ceff

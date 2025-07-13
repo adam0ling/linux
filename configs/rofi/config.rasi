@@ -13,6 +13,7 @@ configuration {
 
 * {
     selected-normal-foreground:  rgba ( 255, 255, 255, 100 % );
+    selected-normal-fbackground: rgba ( 255, 255, 255, 4 % );
     foreground:                  rgba ( 193, 193, 193, 100 % );
     normal-foreground:           @foreground;
     alternate-normal-background: rgba ( 39, 50, 56, 100 % );
