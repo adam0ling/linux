@@ -3,6 +3,11 @@
     frame_color = "#788388"
     
     font = Noto Sans 10
+	
+    corners = all
+    corner_radius = 5
+    progress_bar_corner_radius = 2
+    timeout = 10
     
     # Allow a small subset of html markup:
     #   <b>bold</b>
@@ -68,7 +73,12 @@
     # the top and down respectevly.
     # The width can be negative.  In this case the actual width is the
     # screen width minus the width defined in within the geometry option.
-    geometry = "0x4-25+25"
+    # geometry = "0x4-50+50"
+    # width = 
+    # height = 4
+    offset = (21, 56)
+    origin = "top-right"
+    gap_size = 2
     
     # Shrink window if it's smaller than the width.  Will be ignored if
     # width is 0.
@@ -99,7 +109,7 @@
     # 
     # If this option is set to mouse or keyboard, the monitor option
     # will be ignored.
-    follow = mouse
+    # follow = mouse
     
     # Should a notification popped up from history be sticky or timeout
     # as if it would normally do.
@@ -134,7 +144,7 @@
     #  * foreground: use the same color as the foreground;
     #  * frame: use the same color as the frame;
     #  * anything else will be interpreted as a X color.
-    separator_color = #263238
+    separator_color = "#374952"
     
     # Print a notification on startup.
     # This is mainly for error detection, since dbus (re-)starts dunst
@@ -145,7 +155,7 @@
     dmenu = /usr/bin/dmenu -p dunst:
     
     # Browser for opening urls in context menu.
-    browser = palemoon
+    browser = firefox
 
     # Align icons left/right/off
     icon_position = left
@@ -193,7 +203,7 @@
 [urgency_critical]
     background = "#D62929"
     foreground = "#F9FAF9"
-    timeout = 0
+    timeout = 10
 
 
 # Every section that isn't one of the above is interpreted as a rules to
